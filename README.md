@@ -1,5 +1,6 @@
-# aws-freepascal-runtime
-A skeleton FreePascal Custom Runtime for AWS Lambda
+# AWS FreePascal Custom Runtime
+
+A bare bones FreePascal Custom Runtime for AWS Lambda
 
 The custom runtime allows you to use FreePascal natively on AWS Lambda without any side-loading or hacky tricks.
 
