@@ -10,6 +10,10 @@ var
   httpClient: TFPHTTPClient;
   awsEvent, awsError: TJSONObject;
 
+const
+  // Current AWS runtime API version
+  APIVERSION = '2018-06-01';
+
 begin
   awsEvent := TJSONObject.Create;
   awsError := TJSONObject.Create;
@@ -19,7 +23,7 @@ begin
     awsHost := GetEnvironmentVariable('AWS_LAMBDA_RUNTIME_API');
 
     // Create the base url
-    awsBaseUrl := 'http://' + awsHost + '/2018-06-01/runtime/invocation/';
+    awsBaseUrl := 'http://' + awsHost + '/' + APIVERSION + '/runtime/invocation/';
 
     while true do begin
       try
